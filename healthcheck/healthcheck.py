@@ -6,6 +6,7 @@ Created on Jan 9, 2015
 from threading import Thread
 import time
 import subprocess
+import healthcheck
 from healthcheck.httpserver import HealthCheckHttpServer
 import json
 
@@ -27,7 +28,6 @@ class HealthCheck:
                 if not self.check_server:
                     self.check_server = HealthCheckHttpServer()
                     self.check_server.start()
-                    break
                 else:
                     print "Http server is running"
             else:
