@@ -1,4 +1,4 @@
-Health
+Health Check Service
 ======================================
 
 A simple daemon to host a http health check on port 10241
