@@ -1,0 +1,4 @@
+{
+	"command": "ps -ef | grep sensu-trapd | grep python",
+	"internval": 5
+}

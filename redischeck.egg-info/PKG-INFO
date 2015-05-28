@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: redischeck
+Version: 1.0dev-r0
+Summary: Provide a health check for redis master-slave node
+Home-page: UNKNOWN
+Author: Autumn Wang
+Author-email: shoujinwang@gmail.com
+License: UNKNOWN
+Description: Provide a health check for redis master-slave node
+Platform: UNKNOWN
