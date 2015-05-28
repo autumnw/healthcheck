@@ -5,9 +5,9 @@ version = '1.0'
 
 setup(name='healthcheck',
       version=version,
-      description="Provide a health check for redis master-slave node",
+      description="Provide a health check for health master-slave node",
       long_description="""\
-Provide a health check for redis master-slave node""",
+Provide a health check for health master-slave node""",
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='',
       author='Autumn Wang',
@@ -18,7 +18,7 @@ Provide a health check for redis master-slave node""",
       include_package_data=True,
       zip_safe=False,
       scripts=['bin/healthcheck'],
-      data_files=[('/etc/init.d', ['bin/redischeckd']),
+      data_files=[('/etc/init.d', ['bin/healthcheckd']),
                   ('/etc/healthcheck', ['conf/config.json'])],
       install_requires=[
           # -*- Extra requirements: -*-
