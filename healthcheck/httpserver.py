@@ -6,6 +6,9 @@ Created on Jan 9, 2015
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from threading import Thread
 
+import logging
+logger = logging.getLogger(__name__)
+
 class HealthCheckHandler(BaseHTTPRequestHandler):
     
     #Handler for the GET requests
@@ -38,17 +41,17 @@ class HealthCheckHttpServer(Thread):
         
         try:
             
-            print 'Started httpserver on port ' , self.port
+            logger.info( 'Started httpserver on port %d' % self.port)
             self.__closed__ = False
             self.server.serve_forever()
         
         except KeyboardInterrupt:
-            print '^C received, shutting down the web server'
+            logger.info( '^C received, shutting down the web server')
             self.server.socket.close()
             self.__closed__ = True
 
         except Exception as e:
-            print "Exception : %s" % e
+            logger.exception(e)
     
 
 

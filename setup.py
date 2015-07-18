@@ -19,7 +19,7 @@ Provide a health check for health master-slave node""",
       zip_safe=False,
       scripts=['bin/healthcheck'],
       data_files=[('/etc/init.d', ['bin/healthcheckd']),
-                  ('/etc/healthcheck', ['conf/config.json'])],
+                  ('/etc/healthcheck', ['conf/config.json', 'conf/logging.json', 'conf/detect.sh'])],
       install_requires=[
           # -*- Extra requirements: -*-
       ],

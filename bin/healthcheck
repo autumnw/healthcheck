@@ -6,7 +6,12 @@ Created on Jan 9, 2015
 @author: Autumn
 '''
 from healthcheck.healthcheck import HealthCheck
+from healthcheck.utils import make_log_dir
+from healthcheck.log import setup_logging
 import sys
+
+make_log_dir("/var/log/healthcheck")
+setup_logging(default_path="/etc/healthcheck/logging.json")
 
 check = HealthCheck(sys.argv[1])
 check.start()
